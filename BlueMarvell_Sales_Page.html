@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="description" content="12-week science-backed performance transformation by Cornell-educated body architect and U.S. patent holder Reginald J. Gardiner II. Blue Marvel Protocol. Start today.">
+<meta property="og:title" content="Blue Marvel 12-Week Performance System — Laso Fitness">
+<meta property="og:description" content="Your nervous system has a performance setting most trainers don't know exists. 12 weeks. 36 sessions. Peer-reviewed science. Start today.">
+<meta name="theme-color" content="#0D0D0F">
+<title>Blue Marvel · 12-Week Performance System · Laso Fitness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --gold:#C9A227;--gold-lt:#F0D060;--gold-dk:#8B6F14;
+  --ink:#0D0D0F;--ink2:#141416;--ink3:#1E1E20;--ink4:#282828;
+  --white:#FFFFFF;--slate:#8A9BB0;--slate-lt:#B0BEC8;
+  --green:#2D9E6F;--blue:#2D6FA5;--red:#C23B3B;
+  --paper:#FAFAF7;--border:rgba(255,255,255,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── TYPOGRAPHY ── */
+.bebas{font-family:'Bebas Neue',sans-serif;letter-spacing:.04em}
+.label{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:block}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:1rem;display:block}
+
+/* ── LAYOUT ── */
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+.wrap-lg{max-width:900px;margin:0 auto;padding:0 20px}
+section{padding:72px 0 64px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:580px){.grid2{grid-template-columns:1fr}}
+
+/* ── HERO ── */
+.hero{background:var(--ink);min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:80px 20px 60px;position:relative;overflow:hidden}
+.hero-noise{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(201,162,39,0.06) 0%,transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(45,110,165,0.04) 0%,transparent 50%);pointer-events:none}
+.hero-inner{max-width:620px;margin:0 auto;position:relative;z-index:1;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,0.10);border:1px solid rgba(201,162,39,0.25);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:500;color:var(--gold);margin-bottom:2rem;letter-spacing:.04em}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-h1{font-size:clamp(2.6rem,8vw,4.5rem);font-weight:300;line-height:1.08;margin-bottom:1.5rem;color:var(--white)}
+.hero-h1 strong{font-weight:600;color:var(--gold);display:block}
+.hero-sub{font-size:clamp(1rem,2.5vw,1.125rem);color:var(--slate-lt);line-height:1.65;max-width:520px;margin:0 auto 2.5rem}
+.hero-cta{display:inline-flex;flex-direction:column;align-items:center;gap:8px}
+.btn-primary{background:var(--gold);color:var(--ink);font-size:16px;font-weight:600;padding:16px 40px;border-radius:100px;border:none;cursor:pointer;font-family:inherit;letter-spacing:.02em;display:inline-block;text-decoration:none;transition:all .2s;touch-action:manipulation}
+.btn-primary:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.btn-primary:active{transform:translateY(0);opacity:.9}
+.btn-ghost{background:transparent;color:var(--white);font-size:15px;font-weight:400;padding:14px 32px;border-radius:100px;border:1px solid var(--border);cursor:pointer;font-family:inherit;display:inline-block;text-decoration:none;transition:all .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.03)}
+.hero-guarantee{font-size:12px;color:var(--slate);margin-top:.75rem}
+.hero-guarantee span{color:var(--green)}
+.hero-stats{display:flex;justify-content:center;gap:clamp(24px,5vw,56px);margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border)}
+.hero-stat-num{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;color:var(--gold);display:block;line-height:1}
+.hero-stat-label{font-size:11px;color:var(--slate);margin-top:4px;letter-spacing:.06em;text-transform:uppercase}
+.hero-founder{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:2rem;padding:12px 20px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid var(--border)}
+.founder-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dk),var(--gold));display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;color:var(--ink);flex-shrink:0}
+.founder-info{text-align:left}
+.founder-name{font-size:14px;font-weight:500}
+.founder-creds{font-size:11px;color:var(--slate);margin-top:1px}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;overflow:hidden}
+.trust-items{display:flex;gap:clamp(24px,5vw,56px);justify-content:center;align-items:center;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate-lt);white-space:nowrap}
+.trust-icon{font-size:16px}
+
+/* ── PROBLEM ── */
+.problem{background:var(--ink2)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:2.5rem}
+@media(max-width:580px){.problem-grid{grid-template-columns:1fr}}
+.problem-card{background:var(--ink3);border:1px solid var(--border);border-radius:16px;padding:20px}
+.problem-card-icon{font-size:28px;margin-bottom:12px}
+.problem-card-title{font-size:15px;font-weight:500;margin-bottom:6px}
+.problem-card-desc{font-size:13px;color:var(--slate);line-height:1.6}
+
+/* ── SCIENCE ── */
+.science{background:var(--ink)}
+.science-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2rem}
+@media(max-width:520px){.science-grid{grid-template-columns:1fr}}
+.science-card{background:var(--ink2);border:1px solid rgba(201,162,39,0.15);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 18px}
+.science-pub{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.science-finding{font-size:14px;font-weight:500;line-height:1.5;margin-bottom:4px}
+.science-note{font-size:12px;color:var(--slate);line-height:1.5}
+.spectrum{display:flex;gap:0;margin:2rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.spectrum-phase{flex:1;padding:16px 12px;text-align:center;border-right:1px solid var(--border)}
+.spectrum-phase:last-child{border:none}
+.spectrum-name{font-size:13px;font-weight:500;margin-bottom:4px}
+.spectrum-desc{font-size:11px;color:var(--slate);line-height:1.4}
+@media(max-width:560px){.spectrum{flex-direction:column}}
+
+/* ── PRODUCT ── */
+.product{background:var(--ink2)}
+.product-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:32px;align-items:center;margin-top:2rem}
+@media(max-width:620px){.product-grid{grid-template-columns:1fr}}
+.phone-mockup{background:var(--ink3);border:2px solid var(--border);border-radius:36px;padding:20px;max-width:240px;margin:0 auto}
+.phone-screen{background:var(--ink4);border-radius:24px;overflow:hidden;aspect-ratio:9/19}
+.phone-inner{padding:16px;height:100%;display:flex;flex-direction:column;gap:10px}
+.phone-header{font-size:12px;font-weight:600;color:var(--gold)}
+.phone-ring-wrap{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px}
+.phone-ring-svg{flex-shrink:0}
+.phone-ring-info{flex:1}
+.phone-ring-num{font-size:20px;font-weight:600;color:var(--gold);line-height:1}
+.phone-ring-sub{font-size:9px;color:var(--slate);margin-top:2px}
+.phone-breath{background:rgba(201,162,39,0.08);border:1px solid rgba(201,162,39,0.2);border-radius:10px;padding:10px;text-align:center}
+.phone-breath-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.phone-breath-state{font-size:18px;font-weight:600}
+.phone-ex{background:rgba(255,255,255,0.03);border-radius:10px;padding:8px 10px;font-size:10px;color:var(--slate-lt)}
+.phone-ex span{color:var(--green)}
+.product-features{list-style:none;display:flex;flex-direction:column;gap:12px}
+.product-feature{display:flex;align-items:flex-start;gap:12px;font-size:14px;line-height:1.5}
+.feature-check{width:20px;height:20px;border-radius:50%;background:rgba(45,158,111,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:11px}
+
+/* ── PROGRAM PREVIEW ── */
+.program{background:var(--ink)}
+.phase-tabs-wrap{display:flex;gap:8px;margin:1.5rem 0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+.phase-tab{background:var(--ink2);border:1px solid var(--border);border-radius:100px;padding:8px 18px;font-size:13px;font-weight:500;color:var(--slate);cursor:pointer;flex-shrink:0;transition:all .2s;touch-action:manipulation}
+.phase-tab.active{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.phase-content{background:var(--ink2);border:1px solid var(--border);border-radius:16px;padding:20px}
+.phase-weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+@media(max-width:480px){.phase-weeks{grid-template-columns:repeat(2,1fr)}}
+.week-cell{background:var(--ink3);border-radius:10px;padding:10px 8px;text-align:center}
+.week-num{font-size:11px;font-weight:500;color:var(--gold);margin-bottom:3px;text-transform:uppercase;letter-spacing:.06em}
+.week-focus{font-size:12px;color:var(--slate-lt);line-height:1.3}
+.phase-breath{background:rgba(201,162,39,0.06);border:1px solid rgba(201,162,39,0.2);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--slate-lt);line-height:1.5}
+.phase-breath strong{color:var(--gold)}
+
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--ink2)}
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:2rem}
+@media(max-width:540px){.testi-grid{grid-template-columns:1fr}}
+.testi-card{background:var(--ink3);border:1px solid var(--border);border-radius:16px;padding:20px}
+.testi-stars{color:var(--gold);font-size:13px;margin-bottom:10px;letter-spacing:2px}
+.testi-quote{font-size:14px;line-height:1.65;color:var(--slate-lt);margin-bottom:14px}
+.testi-author{display:flex;align-items:center;gap:10px}
+.testi-avatar{width:32px;height:32px;border-radius:50%;background:var(--ink4);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.testi-name{font-size:13px;font-weight:500}
+.testi-role{font-size:11px;color:var(--slate)}
+
+/* ── PRICING ── */
+.pricing{background:var(--ink)}
+.pricing-note{font-size:13px;color:var(--slate);text-align:center;margin-bottom:2rem;line-height:1.6}
+.founding-badge{display:inline-block;background:rgba(194,59,59,0.12);border:1px solid rgba(194,59,59,0.3);color:#E88;border-radius:100px;padding:4px 12px;font-size:12px;font-weight:500;margin-bottom:.5rem}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.pricing-grid{grid-template-columns:1fr}}
+.pricing-card{background:var(--ink2);border:1px solid var(--border);border-radius:20px;padding:24px;position:relative;transition:border-color .2s}
+.pricing-card:hover{border-color:rgba(201,162,39,0.3)}
+.pricing-card.featured{border:2px solid var(--gold)}
+.featured-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-size:11px;font-weight:600;padding:3px 14px;border-radius:100px;letter-spacing:.06em;white-space:nowrap}
+.pricing-tier{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+.pricing-price{font-size:40px;font-weight:300;color:var(--white);line-height:1;margin-bottom:4px}
+.pricing-period{font-size:13px;color:var(--slate);margin-bottom:16px}
+.pricing-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.pf{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--slate-lt);line-height:1.4}
+.pf-check{color:var(--green);flex-shrink:0;margin-top:1px}
+.pricing-btn{width:100%;background:var(--ink3);border:1px solid var(--border);color:var(--white);font-size:14px;font-weight:500;padding:13px;border-radius:100px;cursor:pointer;font-family:inherit;transition:all .2s;text-align:center;display:block;text-decoration:none;touch-action:manipulation}
+.pricing-btn:hover{border-color:var(--gold);color:var(--gold)}
+.pricing-card.featured .pricing-btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.pricing-card.featured .pricing-btn:hover{background:var(--gold-lt)}
+.value-note{text-align:center;margin-top:1rem;font-size:13px;color:var(--slate)}
+
+/* ── INTERNATIONAL ── */
+.international{background:var(--ink2)}
+.market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:1.5rem}
+@media(max-width:520px){.market-grid{grid-template-columns:1fr 1fr}}
+.market-card{background:var(--ink3);border:1px solid var(--border);border-radius:12px;padding:14px}
+.market-flag{font-size:24px;margin-bottom:6px}
+.market-name{font-size:13px;font-weight:500;margin-bottom:2px}
+.market-note{font-size:11px;color:var(--slate);line-height:1.4}
+
+/* ── FAQ ── */
+.faq{background:var(--ink)}
+.faq-list{margin-top:2rem;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--ink2);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.faq-q{padding:16px 20px;font-size:15px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;touch-action:manipulation}
+.faq-arrow{color:var(--gold);flex-shrink:0;transition:transform .2s;font-size:18px}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:all .3s ease;font-size:14px;color:var(--slate-lt);line-height:1.7}
+.faq-item.open .faq-a{max-height:300px;padding:0 20px 16px}
+.faq-item.open .faq-arrow{transform:rotate(45deg)}
+
+/* ── GUARANTEE ── */
+.guarantee{background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 20px;text-align:center}
+.guarantee-icon{font-size:48px;margin-bottom:1rem}
+.guarantee-title{font-size:22px;font-weight:500;margin-bottom:.75rem}
+.guarantee-desc{font-size:14px;color:var(--slate-lt);line-height:1.7;max-width:500px;margin:0 auto}
+
+/* ── FINAL CTA ── */
+.final-cta{background:var(--ink);padding:80px 20px;text-align:center}
+.final-h{font-size:clamp(2rem,6vw,3.5rem);font-weight:300;line-height:1.1;margin-bottom:1rem}
+.final-h strong{color:var(--gold);font-weight:600}
+.final-sub{font-size:clamp(.95rem,2vw,1.1rem);color:var(--slate-lt);max-width:480px;margin:0 auto 2.5rem;line-height:1.65}
+
+/* ── FOOTER ── */
+footer{background:var(--ink2);border-top:1px solid var(--border);padding:32px 20px;text-align:center}
+.footer-logo{font-size:20px;font-weight:600;color:var(--gold);letter-spacing:.04em;margin-bottom:.5rem}
+.footer-tagline{font-size:13px;color:var(--slate);margin-bottom:1rem}
+.footer-links{display:flex;justify-content:center;gap:24px;font-size:12px;color:var(--slate)}
+.footer-links a{color:var(--slate);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+
+/* ── STICKY CTA ── */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:var(--ink2);border-top:1px solid rgba(201,162,39,0.3);padding:12px 20px;display:none;z-index:100;justify-content:space-between;align-items:center;gap:12px}
+.sticky-cta.visible{display:flex}
+.sticky-left{flex:1}
+.sticky-title{font-size:13px;font-weight:500}
+.sticky-price{font-size:12px;color:var(--gold)}
+.sticky-btn{background:var(--gold);color:var(--ink);font-size:14px;font-weight:600;padding:10px 22px;border-radius:100px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;touch-action:manipulation}
+@media(max-width:480px){.sticky-cta{padding-bottom:calc(12px + env(safe-area-inset-bottom))}}</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-noise"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Founding Member Pricing — Limited Time
+    </div>
+    <h1 class="hero-h1">
+      Your Nervous System Has a<br>
+      <strong>Performance Setting.</strong><br>
+      We Found the Protocol.
+    </h1>
+    <p class="hero-sub">12 weeks. 36 sessions. Peer-reviewed neuroscience. No gym required. Start on your phone in 60 seconds. Built by a Cornell-educated body architect with a U.S. patent and 20+ years of results.</p>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn-primary">Start the 12 Weeks — From $97 →</a>
+      <div class="hero-guarantee"><span>✓</span> Instant digital delivery · Start today · No equipment needed</div>
+    </div>
+    <div class="hero-stats">
+      <div><span class="hero-stat-num">12</span><span class="hero-stat-label">Weeks</span></div>
+      <div><span class="hero-stat-num">36</span><span class="hero-stat-label">Sessions</span></div>
+      <div><span class="hero-stat-num">4</span><span class="hero-stat-label">Peer studies</span></div>
+      <div><span class="hero-stat-num">1</span><span class="hero-stat-label">U.S. Patent</span></div>
+    </div>
+    <div class="hero-founder">
+      <div class="founder-avatar">RG</div>
+      <div class="founder-info">
+        <div class="founder-name">Reginald J. Gardiner II</div>
+        <div class="founder-creds">Cornell BA · U.S. Patent Holder · 20+ Years · Washington D.C.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-items">
+    <div class="trust-item"><span class="trust-icon">🏛️</span> Cornell University</div>
+    <div class="trust-item"><span class="trust-icon">⚖️</span> U.S. Patent Holder</div>
+    <div class="trust-item"><span class="trust-icon">📄</span> Peer-Reviewed Science</div>
+    <div class="trust-item"><span class="trust-icon">📱</span> Works on Any Device</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> Instant Access</div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="wrap">
+    <span class="eyebrow">Why most programs fail</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:.75rem">They train your body.<br><span style="color:var(--gold)">They ignore your nervous system.</span></h2>
+    <p style="font-size:15px;color:var(--slate-lt);line-height:1.7;max-width:520px">Most programs fail at week 4 — not because you quit, but because they were never designed to work with your neuroscience. The Blue Marvel Protocol changes the equation.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-card-icon">📉</div>
+        <div class="problem-card-title">Random programming</div>
+        <div class="problem-card-desc">No periodization. No deload weeks. No load management. Your body adapts in 4–6 weeks — then plateaus permanently.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-icon">🧠</div>
+        <div class="problem-card-title">Zero nervous system training</div>
+        <div class="problem-card-desc">The sympathetic nervous system controls your output ceiling. Untrained, it caps you. Trained, it unlocks performance most people never access.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-icon">😴</div>
+        <div class="problem-card-title">No recovery science</div>
+        <div class="problem-card-desc">Training without HRV-guided recovery is like driving with the fuel gauge taped over. You don't know when you're empty until you're broken.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section class="science" id="science">
+  <div class="wrap">
+    <span class="eyebrow">The research behind Blue Marvel</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:.75rem">Not a fitness trend.<br><span style="color:var(--gold)">A neuroscience protocol.</span></h2>
+    <p style="font-size:15px;color:var(--slate-lt);line-height:1.7;max-width:520px;margin-bottom:1.5rem">Every component of this program is anchored in peer-reviewed research. These are the four studies that built the Blue Marvel Protocol.</p>
+    <div class="science-grid">
+      <div class="science-card">
+        <div class="science-pub">Kox et al. 2014 — PNAS</div>
+        <div class="science-finding">Voluntary SNS activation via structured breathwork is scientifically proven</div>
+        <div class="science-note">The entire pre-session breathwork protocol is built on this landmark study from the Proceedings of the National Academy of Sciences.</div>
+      </div>
+      <div class="science-card">
+        <div class="science-pub">Dietrich 2003 — Consciousness & Cognition</div>
+        <div class="science-finding">The Lock-In is real — and trainable</div>
+        <div class="science-note">Transient Hypofrontality explains why peak performance states feel effortless. Phase 3 is engineered to get you there every session.</div>
+      </div>
+      <div class="science-card">
+        <div class="science-pub">PMC6329333 — NCBI PubMed</div>
+        <div class="science-finding">130 BPM music extends maximum effort by 10.7%</div>
+        <div class="science-note">A legal, evidence-based performance enhancer. The Laso 130 BPM playlist is prescribed for every cardio and circuit session.</div>
+      </div>
+      <div class="science-card">
+        <div class="science-pub">PubMed 28573597 — Systematic Review</div>
+        <div class="science-finding">HRV biofeedback improved sport performance in 85.71% of studies</div>
+        <div class="science-note">Morning HRV tells you when to push and when to recover. The app gives you your daily readiness score automatically.</div>
+      </div>
+    </div>
+    <div style="margin-top:2rem">
+      <p style="font-size:13px;color:var(--slate);margin-bottom:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em">The Four-State Spectrum</p>
+      <div class="spectrum">
+        <div class="spectrum-phase" style="background:rgba(45,110,165,0.08)">
+          <div class="spectrum-name">Baseline</div>
+          <div class="spectrum-desc">Resting state. HRV measured here every morning.</div>
+        </div>
+        <div class="spectrum-phase" style="background:rgba(201,162,39,0.06)">
+          <div class="spectrum-name" style="color:var(--gold)">Activation</div>
+          <div class="spectrum-desc">SNS fires. Blue Marvel launches you here.</div>
+        </div>
+        <div class="spectrum-phase" style="background:rgba(45,158,111,0.08)">
+          <div class="spectrum-name" style="color:var(--green)">The Lock-In</div>
+          <div class="spectrum-desc">Peak performance. Motor patterns flow. Time distorts.</div>
+        </div>
+        <div class="spectrum-phase" style="background:rgba(194,59,59,0.06)">
+          <div class="spectrum-name" style="color:#E88">Overload</div>
+          <div class="spectrum-desc">The program prevents this through HRV and deload weeks.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT DEMO -->
+<section class="product" id="product">
+  <div class="wrap">
+    <span class="eyebrow">What you get</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:2rem">A complete performance system.<br><span style="color:var(--gold)">Everything on your phone.</span></h2>
+    <div class="product-grid">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <div class="phone-inner">
+            <div class="phone-header">APP-E-TIGHT · Blue Marvel</div>
+            <div class="phone-ring-wrap">
+              <svg width="48" height="48" viewBox="0 0 48 48" class="phone-ring-svg">
+                <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4"/>
+                <circle cx="24" cy="24" r="20" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round" stroke-dasharray="125.66" stroke-dashoffset="75.4" transform="rotate(-90 24 24)"/>
+              </svg>
+              <div class="phone-ring-info">
+                <div class="phone-ring-num">40</div>
+                <div class="phone-ring-sub">of 150 hrs · 60 remaining</div>
+              </div>
+            </div>
+            <div class="phone-breath">
+              <div class="phone-breath-label">Blue Marvel Protocol</div>
+              <div class="phone-breath-state">Exhale Hold · 47s</div>
+            </div>
+            <div class="phone-ex">Week 9 · Monday · Upper Body<br><span>✓</span> Power breathing complete<br><span>✓</span> DB press 5×8 · 45lbs</div>
+            <div class="phone-ex" style="color:var(--gold)">🔒 The Lock-In active — 12 min</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <ul class="product-features">
+          <li class="product-feature"><div class="feature-check">✓</div><div><strong>12-week program document</strong> — Every session of all 36 workouts written out. Sets, reps, rest periods, breathwork cues. Print it or reference on-screen.</div></li>
+          <li class="product-feature"><div class="feature-check">✓</div><div><strong>App-E-Tight mobile access</strong> — Follow sessions live. Tap exercises to check them off. Watch your 150 Hour Mission ring fill in real time.</div></li>
+          <li class="product-feature"><div class="feature-check">✓</div><div><strong>Animated breathwork timers</strong> — All four protocols (Box Breathing, Power Breathing, Full Blue Marvel, Physiological Sigh) with visual breathing cues and round counters.</div></li>
+          <li class="product-feature"><div class="feature-check">✓</div><div><strong>HRV readiness system</strong> — Daily readiness check tells you whether to train hard, moderate, or recover. Green/yellow/red guidance based on your body's actual state.</div></li>
+          <li class="product-feature"><div class="feature-check">✓</div><div><strong>Benchmark tracker</strong> — Record push-up max, 1-mile time, plank hold, and breath hold at weeks 4, 8, and 12. See the data of your transformation.</div></li>
+          <li class="product-feature"><div class="feature-check">✓</div><div><strong>Nutrition framework</strong> — BMR calculator using the Mifflin-St Jeor equation. Daily caloric targets. USDA food database search. No guessing.</div></li>
+          <li class="product-feature"><div class="feature-check">✓</div><div><strong>Laso Run Club access</strong> — Join LASO01 for Saturday group runs. GPS tracking, live leaderboard, real-time group map. Community accountability.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM PREVIEW -->
+<section class="program" id="program">
+  <div class="wrap">
+    <span class="eyebrow">The 12-week structure</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:.5rem">Three phases.<br><span style="color:var(--gold)">One transformation.</span></h2>
+    <p style="font-size:15px;color:var(--slate-lt);line-height:1.7;max-width:480px;margin-bottom:1rem">Each phase builds on the last. The breathwork protocol intensifies. The loading progresses. The nervous system adapts. By week 12, you are operating at a level most people never reach.</p>
+    <div class="phase-tabs-wrap">
+      <button class="phase-tab active" onclick="setPhase(0,this)">Phase 1 — Activation</button>
+      <button class="phase-tab" onclick="setPhase(1,this)">Phase 2 — Load</button>
+      <button class="phase-tab" onclick="setPhase(2,this)">Phase 3 — Lock-In</button>
+    </div>
+    <div class="phase-content" id="phaseContent"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <span class="eyebrow">Early results</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:2rem">Real people.<br><span style="color:var(--gold)">Real data.</span></h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"I've hired three personal trainers over the years. None of them ever mentioned my breathing once. Week 2 of Blue Marvel and I'm already noticing my sprint times improving. The science is real."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">👨🏾</div>
+          <div><div class="testi-name">Arthur T.</div><div class="testi-role">Washington D.C. · Week 2</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"The app walks you through everything. I've done programs before where I gave up because I didn't know what to do. This one tells me exactly what to do, when to breathe, and when to rest. Different."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">👩🏾</div>
+          <div><div class="testi-name">Founding Member</div><div class="testi-role">DMV Area · Week 4</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"My company hired Reginald for our wellness program. The difference between this and every other corporate wellness offering is that this one treats you like an intelligent adult who can understand science."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">🏛️</div>
+          <div><div class="testi-name">Law Firm Partner</div><div class="testi-role">Washington D.C. Law Firm</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"I've been skeptical of fitness apps my whole life. This one is different because the credentials back it up. A patent. Peer-reviewed science. 20 years of actual results. I'm in for all 12 weeks."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">👨🏾‍💼</div>
+          <div><div class="testi-name">K. Williams</div><div class="testi-role">Federal Employee · Week 1</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <span class="eyebrow">Choose your path</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:.75rem;text-align:center">100% Digital.<br><span style="color:var(--gold)">Start in 60 seconds.</span></h2>
+    <p class="pricing-note">No gym. No equipment delivery. No waiting. Instant access to every file and the app the moment you purchase. The founding member price is limited to the first 100 customers.</p>
+    <div style="text-align:center;margin-bottom:1.5rem">
+      <div class="founding-badge">⚡ Founding Member Pricing — First 100 Only</div>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tier">Foundation</div>
+        <div class="pricing-price">$97</div>
+        <div class="pricing-period">one-time · instant delivery</div>
+        <ul class="pricing-features">
+          <li class="pf"><span class="pf-check">✓</span>12-week program (PDF + in-app)</li>
+          <li class="pf"><span class="pf-check">✓</span>All breathwork protocols</li>
+          <li class="pf"><span class="pf-check">✓</span>Nutrition framework</li>
+          <li class="pf"><span class="pf-check">✓</span>Benchmark tracking system</li>
+          <li class="pf"><span class="pf-check">✓</span>App-E-Tight 7-day trial</li>
+        </ul>
+        <a href="https://stan.store/lasofitness" class="pricing-btn">Get Foundation →</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="featured-label">MOST POPULAR</div>
+        <div class="pricing-tier">Performance</div>
+        <div class="pricing-price">$197</div>
+        <div class="pricing-period">one-time · instant delivery</div>
+        <ul class="pricing-features">
+          <li class="pf"><span class="pf-check">✓</span>Everything in Foundation</li>
+          <li class="pf"><span class="pf-check">✓</span>App-E-Tight — 3 months full access</li>
+          <li class="pf"><span class="pf-check">✓</span>150 Hour Mission ring tracker</li>
+          <li class="pf"><span class="pf-check">✓</span>HRV readiness system</li>
+          <li class="pf"><span class="pf-check">✓</span>Laso Run Club access (LASO01)</li>
+        </ul>
+        <a href="https://stan.store/lasofitness" class="pricing-btn">Get Performance →</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier">Elite</div>
+        <div class="pricing-price">$297</div>
+        <div class="pricing-period">one-time · instant delivery</div>
+        <ul class="pricing-features">
+          <li class="pf"><span class="pf-check">✓</span>Everything in Performance</li>
+          <li class="pf"><span class="pf-check">✓</span>App-E-Tight — 6 months full access</li>
+          <li class="pf"><span class="pf-check">✓</span>Personalized 1-week plan from Reginald</li>
+          <li class="pf"><span class="pf-check">✓</span>Blue Marvel Founding Member badge</li>
+        </ul>
+        <a href="https://stan.store/lasofitness" class="pricing-btn">Get Elite →</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier">Group / Corporate</div>
+        <div class="pricing-price">$497</div>
+        <div class="pricing-period">5-person team access</div>
+        <ul class="pricing-features">
+          <li class="pf"><span class="pf-check">✓</span>5 individual program licenses</li>
+          <li class="pf"><span class="pf-check">✓</span>Team leaderboard and run club code</li>
+          <li class="pf"><span class="pf-check">✓</span>HR wellness report template</li>
+          <li class="pf"><span class="pf-check">✓</span>1 group coaching session</li>
+        </ul>
+        <a href="mailto:gardinerincorp@gmail.com" class="pricing-btn">Contact for Team →</a>
+      </div>
+    </div>
+    <p class="value-note">Questions? Email <strong style="color:var(--gold)">gardinerincorp@gmail.com</strong> — Reginald responds personally.</p>
+  </div>
+</section>
+
+<!-- INTERNATIONAL -->
+<section class="international" id="international">
+  <div class="wrap">
+    <span class="eyebrow">Available worldwide</span>
+    <h2 style="font-size:clamp(1.5rem,4vw,2.2rem);font-weight:400;line-height:1.2;margin-bottom:.75rem">Digital delivery everywhere.<br><span style="color:var(--gold)">No borders.</span></h2>
+    <p style="font-size:14px;color:var(--slate-lt);line-height:1.7;max-width:480px;margin-bottom:1rem">Instant download. Works on any device. English-language program with Spanish subtitles on all video content. Portuguese and French versions in development.</p>
+    <div class="market-grid">
+      <div class="market-card"><div class="market-flag">🇺🇸</div><div class="market-name">United States</div><div class="market-note">Primary market. DMV / nationwide.</div></div>
+      <div class="market-card"><div class="market-flag">🇬🇧</div><div class="market-name">United Kingdom</div><div class="market-note">English. Strong fitness market.</div></div>
+      <div class="market-card"><div class="market-flag">🇨🇦</div><div class="market-name">Canada</div><div class="market-note">English. High disposable income.</div></div>
+      <div class="market-card"><div class="market-flag">🇯🇲</div><div class="market-name">Jamaica / Caribbean</div><div class="market-note">English. Strong athletic culture.</div></div>
+      <div class="market-card"><div class="market-flag">🇳🇬</div><div class="market-name">Nigeria / West Africa</div><div class="market-note">English. Growing middle class.</div></div>
+      <div class="market-card"><div class="market-flag">🇧🇷</div><div class="market-name">Brazil</div><div class="market-note">PT version Q3 2026. 2nd largest fitness market globally.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Common questions</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.4rem);font-weight:400;line-height:1.2;margin-bottom:.5rem">Everything you<br><span style="color:var(--gold)">need to know.</span></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I need any equipment? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Two or three sets of dumbbells (light, medium, heavy) and a chair. That is it. No gym membership, no machines, no cables. The program is designed to work in any living room, garage, or hotel room in the world.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How does the app work? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Open app-e-tight.netlify.app on your phone browser — no download required, no App Store, no waiting. It installs to your home screen and behaves like a native app. The Blue Marvel tab walks you through every week, every session, and every breathwork protocol with live timers and checkboxes.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the Blue Marvel breathwork protocol? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">It is a structured breathing system adapted from the Kox et al. 2014 peer-reviewed research on voluntary sympathetic nervous system activation. Phase 1 uses Box Breathing. Phase 2 introduces Power Breathing cycles. Phase 3 is the Full Blue Marvel Protocol with exhale holds. All protocols have animated timers in the app. The physiological sigh is used for post-session recovery. No equipment. No supplements. Just breathing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How fit do I need to be to start? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Week 1 is accessible to anyone who can do a push-up. The program uses progressive overload — each week is slightly harder than the last, and every 4th week is a deload week. Whether you are returning to fitness after years off or are already athletic, the protocol adapts to your starting point.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What makes this different from other fitness programs? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Three things no competitor offers: (1) A U.S. patent — the LasO 360 center-of-gravity loading system is the only patented training device in this space. (2) Peer-reviewed science — every protocol component cites published research, not trainer opinion. (3) A measurable transformation milestone — the 150 Hour Mission gives you a documented endpoint, not an endless subscription to keep buying content.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this available outside the United States? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Yes. The program is 100% digital — instant download anywhere in the world. The app works on any phone or tablet with a browser. We currently serve customers in the US, UK, Canada, Caribbean, and West Africa. Portuguese and Spanish versions are in development.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Who is Reginald Gardiner? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Reginald J. Gardiner II holds a Bachelor of Arts from Cornell University, a U.S. patent for the LasO 360 training device, and has 20+ years of experience as a personal trainer and nutrition consultant in the Washington D.C. metropolitan area. His corporate wellness clients include partners and associates at major D.C. law firms. He is the founder of Laso Fitness and the creator of the Blue Marvel Performance Protocol.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<div class="guarantee">
+  <div class="guarantee-icon">🛡️</div>
+  <h3 class="guarantee-title">The Transformation Guarantee</h3>
+  <p class="guarantee-desc">If you complete Phase 1 (Weeks 1–4) — all 16 sessions logged in the app — and do not see measurable improvement in at least two of your four benchmarks (push-ups, mile time, plank hold, breath hold), email us. We make it right. The science works. The protocol works. You will see it.</p>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="final">
+  <div class="wrap">
+    <h2 class="final-h">150 hours from now,<br><strong>your body will be different.</strong></h2>
+    <p class="final-sub">The protocol is built. The science is real. The app is live. The only variable is you. Start today.</p>
+    <a href="#pricing" class="btn-primary" style="font-size:17px;padding:18px 48px">Start the 12 Weeks →</a>
+    <div style="margin-top:1.5rem;font-size:13px;color:var(--slate)">Instant digital delivery · Works on any device · Start in 60 seconds</div>
+    <div style="margin-top:2rem;font-size:13px;color:var(--slate);font-style:italic">"You are an accumulation of every hour you have ever lived.<br>Very few of them, spent wisely in training, have a tremendous return on your investment."<br><span style="color:var(--gold)">— Reginald J. Gardiner II, Body Architect</span></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">LASO FITNESS</div>
+  <div class="footer-tagline">Patented. Science-backed. 20+ years. Washington D.C.</div>
+  <div class="footer-links">
+    <a href="https://app-e-tight.netlify.app">App-E-Tight</a>
+    <a href="https://lasofitness.netlify.app">Laso Fitness</a>
+    <a href="mailto:gardinerincorp@gmail.com">Contact</a>
+    <a href="https://instagram.com/laso_360">IG @laso_360</a>
+    <a href="https://tiktok.com/@laso.fitness">TT @laso.fitness</a>
+  </div>
+  <div style="margin-top:1rem;font-size:11px;color:var(--slate)">© 2026 Laso Fitness LLC · Reginald J. Gardiner II · U.S. Patent Holder · All rights reserved</div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-left">
+    <div class="sticky-title">Blue Marvel 12-Week System</div>
+    <div class="sticky-price">From $97 · Instant Access</div>
+  </div>
+  <button class="sticky-btn" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Get It →</button>
+</div>
+
+<script>
+// Phase content
+var phases = [
+  {
+    label:'Phase 1 · Weeks 1–4',color:'var(--blue)',
+    weeks:[
+      {num:'Week 1',focus:'Movement patterns & box breathing'},
+      {num:'Week 2',focus:'Volume increase + 3-3 breathing run'},
+      {num:'Week 3',focus:'Tempo training (3-0-1 eccentric)'},
+      {num:'Week 4',focus:'Deload + Phase 1 benchmarks'},
+    ],
+    breath:'<strong>Breathwork:</strong> Box breathing 4-4-4-4 × 3 rounds before every strength session. Physiological sigh × 5 after every session. Simple. Foundational. Non-negotiable.'
+  },
+  {
+    label:'Phase 2 · Weeks 5–8',color:'var(--gold)',
+    weeks:[
+      {num:'Week 5',focus:'Progressive load + power breathing intro'},
+      {num:'Week 6',focus:'130 BPM protocol + 800m repeats'},
+      {num:'Week 7',focus:'Peak volume week + cold exposure'},
+      {num:'Week 8',focus:'Deload + Phase 2 benchmarks'},
+    ],
+    breath:'<strong>Breathwork:</strong> 30 power breathing cycles × 3 rounds with 30-second exhale holds before every strength session. This is where the Kox et al. mechanism activates.'
+  },
+  {
+    label:'Phase 3 · Weeks 9–12',color:'var(--green)',
+    weeks:[
+      {num:'Week 9',focus:'The Lock-In begins — full protocol'},
+      {num:'Week 10',focus:'Wearable integration + PR push'},
+      {num:'Week 11',focus:'Personal record week'},
+      {num:'Week 12',focus:'Week 1 replay + final benchmarks'},
+    ],
+    breath:'<strong>Breathwork:</strong> Full Blue Marvel Protocol: 40 power breaths × 3 rounds, 60–90 second exhale holds, physiological sigh × 5 post-session. Every single session.'
+  }
+];
+
+function setPhase(n, btn) {
+  document.querySelectorAll('.phase-tab').forEach(function(t){t.classList.remove('active')});
+  btn.classList.add('active');
+  var ph = phases[n];
+  document.getElementById('phaseContent').innerHTML =
+    '<p style="font-size:13px;font-weight:500;color:'+ph.color+';margin-bottom:12px;letter-spacing:.06em;text-transform:uppercase">'+ph.label+'</p>'+
+    '<div class="phase-weeks">'+
+      ph.weeks.map(function(w){return '<div class="week-cell"><div class="week-num">'+w.num+'</div><div class="week-focus">'+w.focus+'</div></div>';}).join('')+
+    '</div>'+
+    '<div class="phase-breath" style="border-color:'+ph.color+';background:rgba(201,162,39,0.04)">'+ph.breath+'</div>';
+}
+setPhase(0, document.querySelector('.phase-tab'));
+
+// FAQ
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+  if (!isOpen) item.classList.add('open');
+}
+
+// Sticky CTA
+window.addEventListener('scroll', function(){
+  var sticky = document.getElementById('stickyCta');
+  var hero = document.getElementById('top');
+  var heroH = hero ? hero.offsetHeight : 600;
+  if (window.scrollY > heroH) {
+    sticky.classList.add('visible');
+  } else {
+    sticky.classList.remove('visible');
+  }
+});
+</script>
+</body>
+</html>
