@@ -226,7 +226,7 @@
       <a href="#compare">Compare</a>
       <a href="#waitlist">Waitlist</a>
     </div>
-    <a class="btn small" href="#waitlist">Join Waitlist</a>
+    <a class="btn small" href="#waitlist">Join the Waitlist</a>
   </div>
 </nav>
 
@@ -239,7 +239,7 @@
         <h1>Everything Starts<br>at <em>the Center.</em></h1>
         <p class="lede">One Loop. Infinite Load.</p>
         <div class="actions">
-          <a class="btn" href="#waitlist">Join the Waiting List</a>
+          <a class="btn" href="#waitlist">Join the Waitlist</a>
           <a class="btn ghost" href="#science">See the Science</a>
         </div>
         <div class="patent">U.S. Patent No. 11,865,401 B2</div>
@@ -351,7 +351,7 @@
 <section class="cta" id="waitlist">
   <div class="wrap">
     <div class="eyebrow">Get On The List</div>
-    <h2>Join the waiting list</h2>
+    <h2>Join the waitlist</h2>
     <p class="lede">The Laso 360 is built in limited runs, from 10 lb to 80 lb. Add your name and you'll be contacted in order when the next run is ready.</p>
 
     <form id="wlform" class="wl" novalidate>
@@ -415,7 +415,7 @@
         <label class="ck"><input type="checkbox" name="consent_sms"> <span>You may also text me at the number above. Message and data rates may apply. Reply STOP to opt out.</span></label>
       </div>
       <div class="wl-actions">
-        <button type="submit" class="btn" id="wlbtn">Join the Waiting List</button>
+        <button type="submit" class="btn" id="wlbtn">Join the Waitlist</button>
       </div>
       <p class="wl-msg" id="wlmsg" role="status" aria-live="polite"></p>
       <p class="wl-fine">We use your information only to contact you about the Laso 360. We don't sell or share it.</p>
@@ -618,7 +618,7 @@
 <script>
 (function(){
   var SB_URL = 'https://omacnuxopfkdcnyfzztc.supabase.co';
-  var SB_KEY = 'sb_publishable_X42ydXB4MD9NOLAagemrQQ_5DtJ4qeT';
+  var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tYWNudXhvcGZrZGNueWZ6enRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MjA1NTYsImV4cCI6MjA5NTM5NjU1Nn0.prbQMsZGxt9S57glv4R2ebezxSRBdPtZbKc5QC-tfGw';
   var form = document.getElementById('wlform');
   if (!form) return;
   var msg = document.getElementById('wlmsg');
@@ -665,7 +665,7 @@
       } else if (r.status === 409) {
         say("That email is already on the list — you're set.",'ok');
       } else {
-        say('Something went wrong. Text (240) 688-1215 and we will add you manually.','err');
+        say('Could not save (error ' + r.status + '). Text (240) 688-1215 and we will add you manually.','err');
       }
       btn.disabled = false;
     }).catch(function(){
