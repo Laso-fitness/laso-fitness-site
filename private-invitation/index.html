@@ -10,6 +10,29 @@ function initialize(){holes=[{x:w*.16,y:h*.18,d:0,s:180},{x:w*.79,y:h*.23,d:430,
 function jaggedPath(o,r,offset=0){c.beginPath();for(let i=0;i<=48;i++){const a=i/48*Math.PI*2;const v=1+.09*Math.sin(a*5+o.x*.06)+.065*Math.sin(a*11+o.y*.04)+.045*Math.sin(a*19+o.x*.013);const rr=r*v+offset;const x=o.x+Math.cos(a)*rr,y=o.y+Math.sin(a)*rr;if(!i)c.moveTo(x,y);else c.lineTo(x,y);}c.closePath();}
 function makeSmoke(x,y){smoke.push({x,y,dx:rand(-.5,.5),dy:rand(-1.7,-.55),size:rand(10,28),life:rand(50,100),max:100});}
 function makeSpark(x,y){sparks.push({x,y,dx:rand(-2,2),dy:rand(-3,-.4),size:rand(.8,2.7),life:rand(22,58)});}
+// Two brief, branching lightning strikes crown the completed smoldering reveal.
+function lightningBolt(x0,y0,x1,y1,seed,opacity){
+  const steps=9,pts=[];for(let i=0;i<=steps;i++){
+    const p=i/steps;
+    const wiggle=Math.sin(i*9.7+seed*2.4)*16*(1-p*.42);
+    pts.push({x:x0+(x1-x0)*p+wiggle,y:y0+(y1-y0)*p});
+  }
+  c.save();c.lineJoin='round';c.lineCap='round';c.shadowBlur=18;c.shadowColor='rgba(165,201,255,.85)';
+  c.beginPath();pts.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));
+  c.strokeStyle='rgba(120,174,255,'+(opacity*.7)+')';c.lineWidth=9;c.stroke();
+  c.shadowBlur=8;c.strokeStyle='rgba(247,250,255,'+opacity+')';c.lineWidth=2.8;c.stroke();
+  for(const n of [3,6]){const p=pts[n];c.beginPath();c.moveTo(p.x,p.y);c.lineTo(p.x+(n===3?-34:27),p.y+39);c.lineTo(p.x+(n===3?-24:42),p.y+61);c.strokeStyle='rgba(209,228,255,'+(opacity*.75)+')';c.lineWidth=1.4;c.stroke();}
+  c.restore();
+}
+function lightningAt(elapsed){
+  // Strikes wait until the burn has finished. No strobe loop; the CTA remains readable.
+  const strike1=Math.max(0,1-Math.abs(elapsed-11150)/125);
+  const strike2=Math.max(0,1-Math.abs(elapsed-11820)/145);
+  if(strike1>0){lightningBolt(w*.18,0,w*.34,h*.55,2,strike1*.94);}
+  if(strike2>0){lightningBolt(w*.83,0,w*.70,h*.60,5,strike2*.85);}
+  const glow=Math.max(strike1,strike2)*.085;
+  if(glow){c.fillStyle='rgba(203,219,255,'+glow+')';c.fillRect(0,0,w,h);}
+}
 function render(now){const elapsed=now-start;c.clearRect(0,0,w,h);if(elapsed<8000){cover();
 for(const o of holes){const p=Math.max(0,Math.min(1,(elapsed-o.d)/4300));o.r=o.s*Math.pow(p,.95);}
 c.save();c.globalCompositeOperation='destination-out';for(const o of holes)if(o.r>0) {jaggedPath(o,o.r);c.fill();}
@@ -23,7 +46,8 @@ if(elapsed<7450){for(let i=0;i<11;i++){const a=Math.PI+i/10*Math.PI,x=o.x+Math.c
 if(elapsed>=7450 && elapsed<10800 && Math.random()<.30){makeSmoke(rand(w*.12,w*.88),rand(h*.6,h*.98));if(Math.random()<.22)makeSpark(rand(w*.16,w*.84),rand(h*.74,h*.97));}
 smoke=smoke.filter(p=>p.life>0);for(const p of smoke){p.x+=p.dx;p.y+=p.dy;p.size*=1.006;p.life--;const alpha=Math.min(.2,p.life/350);const g=c.createRadialGradient(p.x,p.y,0,p.x,p.y,p.size);g.addColorStop(0,'rgba(175,162,148,'+alpha+')');g.addColorStop(.5,'rgba(108,101,90,'+alpha*.7+')');g.addColorStop(1,'rgba(56,50,43,0)');c.fillStyle=g;c.beginPath();c.arc(p.x,p.y,p.size,0,Math.PI*2);c.fill();}
 sparks=sparks.filter(p=>p.life>0&&p.y>-30);for(const p of sparks){p.x+=p.dx;p.y+=p.dy;p.life--;c.fillStyle='rgba(255,155,30,'+Math.min(1,p.life/20)+')';c.beginPath();c.arc(p.x,p.y,p.size,0,Math.PI*2);c.fill();}
-if(elapsed<11000)requestAnimationFrame(render);else{card.classList.remove('burning');card.classList.add('done');}}
+lightningAt(elapsed);
+if(elapsed<12600)requestAnimationFrame(render);else{card.classList.remove('burning');card.classList.add('done');}}
 btn.addEventListener('click',()=>{if(card.classList.contains('burning')||card.classList.contains('done'))return;btn.disabled=true;if(matchMedia('(prefers-reduced-motion: reduce)').matches){card.classList.add('done');return;}resize();initialize();card.classList.add('burning');start=performance.now();requestAnimationFrame(render);});
 })();
 </script></body></html>
