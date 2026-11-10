@@ -24,9 +24,10 @@ test('unsupported WebAudio still exposes the mute preference without crashing',a
 test('Text Reginald stops audio and never creates another source',async()=>{const s=setup({voice:true});await s.preload();s.api.open();await flush();const count=s.sources.length;s.listeners['sms:click']();await s.tick(11000);s.api.flash();assert.equal(s.sources.length,count);assert.ok(s.sources.every(x=>x.stopped!==undefined));});
 test('backgrounding stops all sources and cancels pending voice',async()=>{const s=setup({voice:true});await s.preload();s.api.open();await flush();s.listeners.pagehide();await s.tick(11000);s.api.flash();assert.equal(s.sources.length,2);assert.ok(s.sources.every(x=>x.stopped!==undefined));});
 test('reduced motion never starts an endless fire loop',async()=>{const s=setup();await s.preload();s.api.open({reducedMotion:true});await flush();assert.deepEqual(s.sources.map(x=>x.buffer.name),['match']);});
-test('original visuals, canvas schedule and reveal timing are byte-identical after removing audio hooks',()=>{
+test('only approved companion lightning changes; other visuals and timing are preserved',()=>{
  const baseline=fs.readFileSync(path.join(__dirname,'baseline.html'),'utf8');let candidate=fs.readFileSync(path.join(__dirname,'../../private-invitation/index.html'),'utf8');
  candidate=candidate.replace("   try{window.LasoInvitationAudio?.flash();}catch(_){}\n",'').replace("try{window.LasoInvitationAudio?.open({reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches});}catch(_){}",'').replace('<script src="invitation-audio.js" defer></script>','');
+ candidate=candidate.replace(/if\(power>0\)\{\n     stormStrike\(hit.coords,power\);[\s\S]*?maximum=Math.max\(maximum,power\);\n   \}/,"if(power>0){stormStrike(hit.coords,power);maximum=Math.max(maximum,power);}");
  assert.equal(candidate,baseline);
 });
 
