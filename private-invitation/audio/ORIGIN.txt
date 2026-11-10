@@ -4,7 +4,7 @@ match-strike.mp3, fire-crackle.mp3 and thunder-crack.mp3 were generated specific
 
 The owner may use, edit and distribute these original assets with the LasO invitation. To the extent any copyright or related rights arise in these procedural assets, they are dedicated under CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/ . No attribution is required.
 
-Encoding: MP3, mono, 22,050 Hz, 40 kb/s. Total encoded size: 43,779 bytes.
-Generation seed: 20261110. Reproducible generation script is stored with the review source.
+Encoding: MP3, mono, 22,050 Hz, 40 kb/s. Total encoded size: 49,526 bytes.
+Generation seeds: crackle 20261110 (preserved stream), match 20261111, thunder 20261112. Reproducible generation script is stored with the review source.
 
 The owner voiceover is not included. No substitute voice has been generated.

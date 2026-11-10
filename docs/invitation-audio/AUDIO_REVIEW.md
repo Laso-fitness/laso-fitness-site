@@ -12,7 +12,7 @@ November 10, 2026. Prepared for review; not merged or published to the live site
 - Failed assets, unavailable/blocked audio and denied storage are caught; audio never gates the visual animation or navigation. Backgrounding stops audio without automatically restarting it.
 - Text Reginald starts no audio; tapping it stops any ongoing invitation sound without preventing the SMS link.
 - Existing visuals and timings are byte-identical after removing the two audio hook lines and deferred script tag. Existing CSS, haptics, SMS URL, lightning schedule and 14.8-second finish remain unchanged.
-- Assets preload only after at least one paint. Three original mono MP3s total 43,779 bytes; actual encoded durations are 0.705s match, 6.060s crackle and 1.855s thunder.
+- Assets preload only after at least one paint. Three original mono MP3s total 49,526 bytes; actual encoded durations are 0.705s match, 6.060s crackle and 3.004s thunder.
 
 ## Verification
 
@@ -35,3 +35,7 @@ Reduced motion preserves the existing instant reveal and omits the looping burn 
 ## Release gate
 
 Review the preview, supply the owner voice recording, and complete the physical iPhone matrix. No live-site publication without Reginald's approval. The candidate does not alter the AI Trainer, App-e-tight, Supabase or the public website refresh branch.
+
+## Sound revision 2
+
+At Reginald’s request, the match now has a sharper dry contact, textured rasp and clearer ignition. Its duration is unchanged. Thunder has a fuller mid-bass impact and a longer rolling tail, still one cue at the first visible lightning frame. The fire asset is byte-identical to revision 1. Asset URLs are versioned to prevent the old cached effects from being replayed. Visual code and cue timing are unchanged.

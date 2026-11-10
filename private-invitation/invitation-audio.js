@@ -5,7 +5,7 @@
 })(typeof window==='undefined'?globalThis:window,function(root,doc){
   'use strict';
   const KEY='laso-invitation-muted-v1',BURN_SECONDS=8,VOICE_DELAY_MS=1000;
-  const files={match:'audio/match-strike.mp3',fire:'audio/fire-crackle.mp3',thunder:'audio/thunder-crack.mp3'};
+  const files={match:'audio/match-strike.mp3?v=2',fire:'audio/fire-crackle.mp3',thunder:'audio/thunder-crack.mp3?v=2'};
   // Owner recording is deliberately absent until supplied. No placeholder voice or 404 request.
   const voiceUrl=root.LasoInvitationAudioConfig?.voiceoverUrl;
   if(typeof voiceUrl==='string'&&voiceUrl)files.voice=voiceUrl;
@@ -75,7 +75,7 @@
     try{
       const t=ctx?.currentTime||0;
       if(fire){if(fireEnvelope){fireEnvelope.gain.cancelScheduledValues(t);fireEnvelope.gain.setValueAtTime(0,t);}fire.stop(t);active.delete(fire);fire=null;}
-      if(ctx?.state==='running')play('thunder',.65);
+      if(ctx?.state==='running')play('thunder',.78);
     }catch(_){}
   }
   function stop(){
