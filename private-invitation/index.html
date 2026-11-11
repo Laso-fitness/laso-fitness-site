@@ -68,9 +68,17 @@ function lightningAt(elapsed){
    const distance=Math.abs(elapsed-hit.time);
    // Quick initial crack, then a subtle 80ms afterglow, no machine-like pulses.
    const power=distance<hit.width?Math.pow(1-distance/hit.width,.58):0;
-   if(power>0){stormStrike(hit.coords,power);maximum=Math.max(maximum,power);}
+   if(power>0){
+     stormStrike(hit.coords,power);
+     // Companion bolts share each existing flash: more lightning, same cadence.
+     const a=hit.coords;
+     stormStrike([1-a[0],1-a[1],Math.min(.97,a[2]+.09),a[3]+71],power*.8);
+     if(hit.time>=12880)stormStrike([.5,a[0],.94,a[3]+113],power*.64);
+     maximum=Math.max(maximum,power);
+   }
  }
  if(maximum>0){
+   try{window.LasoInvitationAudio?.flash();}catch(_){}
    c.fillStyle='rgba(200,221,255,'+(maximum*.12)+')';
    c.fillRect(0,0,w,h);
  }
@@ -91,6 +99,6 @@ smoke=smoke.filter(p=>p.life>0);for(const p of smoke){p.x+=p.dx;p.y+=p.dy;p.size
 sparks=sparks.filter(p=>p.life>0&&p.y>-30);for(const p of sparks){p.x+=p.dx;p.y+=p.dy;p.life--;c.fillStyle='rgba(255,155,30,'+Math.min(1,p.life/20)+')';c.beginPath();c.arc(p.x,p.y,p.size,0,Math.PI*2);c.fill();}
 lightningAt(elapsed);
 if(elapsed<14800)requestAnimationFrame(render);else{card.classList.remove('burning');card.classList.add('done');}}
-btn.addEventListener('click',()=>{if(card.classList.contains('burning')||card.classList.contains('done'))return;btn.disabled=true;haptic([75,45,110]);if(matchMedia('(prefers-reduced-motion: reduce)').matches){card.classList.add('done');return;}resize();initialize();revealBuzzed=false;card.classList.add('burning');start=performance.now();requestAnimationFrame(render);});
+btn.addEventListener('click',()=>{if(card.classList.contains('burning')||card.classList.contains('done'))return;btn.disabled=true;try{window.LasoInvitationAudio?.open({reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches});}catch(_){}haptic([75,45,110]);if(matchMedia('(prefers-reduced-motion: reduce)').matches){card.classList.add('done');return;}resize();initialize();revealBuzzed=false;card.classList.add('burning');start=performance.now();requestAnimationFrame(render);});
 })();
-</script></body></html>
+</script><script src="invitation-audio.js" defer></script></body></html>
